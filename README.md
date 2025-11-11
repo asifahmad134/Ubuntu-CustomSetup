@@ -2,6 +2,18 @@
 
 When installing Ubuntu, choose **DEFAULT SELECTION** (Just the essentials, web browser and basic utilities). All of the below removal and installation is to make Ubuntu more suitable for development.
 
+### The most common and reliable way to check your Ubuntu version using the command line
+
+```bash
+lsb_release -a
+```
+
+### Displays system hostname and key system information, including the Operating System version
+
+```bash
+hostnamectl
+```
+
 ---
 
 ## ⭐⭐⭐ First: Update & Upgrade
@@ -76,7 +88,13 @@ sudo apt purge 'cups*' 'foomatic*' printer-driver-brlaser* printer-driver-foo2zj
 sudo apt autoremove --purge
 ```
 
-### Remove All Backgrounds (50+ MB) - Optional
+### Remove these gnome extensions (Not Recommended for all)
+
+```bash
+sudo apt purge gnome-shell-extension-appindicator gnome-shell-extension-desktop-icons-ng
+```
+
+### Remove All Backgrounds (50+ MB) - Optional / Not Recommended
 
 ```bash
 sudo rm -fdr /usr/share/backgrounds/*
@@ -84,18 +102,14 @@ sudo rm -fdr /usr/share/backgrounds/*
 
 ### Remove Old Kernels
 
-First, identify installed kernels:
+First, identify installed kernels: Then remove specific versions:
 
 ```bash
 dpkg --list | grep -i linux-image
 dpkg --list | grep -i linux-headers
-```
-
-Then remove specific versions:
-
-```bash
-sudo apt purge linux-image-[version]-generic
-sudo apt purge linux-headers-[version]-generic
+dpkg --list | grep -i linux-tools
+dpkg --list | grep -i linux-modules
+sudo apt purge
 sudo apt autopurge
 sudo update-grub
 ```
@@ -107,16 +121,16 @@ sudo update-grub
 ### Essential Development Tools
 
 ```bash
-sudo nala install curl git gnome-shell-extension-manager gnome-tweaks loupe transmission tree foliate systemd-zram-generator lsd
+sudo nala install curl git gh gnome-shell-extension-manager gnome-tweaks loupe transmission tree foliate systemd-zram-generator lsd
 sudo nala install nautilus-admin gedit gedit-plugins
 sudo nala install thunar thunar-media-tags-plugin
-sudo nala install totem amberol gstreamer1.0-libav
+sudo nala install totem amberol gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
 ```
 
 ### Optional Utilities
 
 ```bash
-sudo nala install ptyxis vlc file-roller rar unrar synaptic gnome-decoder adb fastboot gh gnome-calendar
+sudo nala install ptyxis vlc file-roller rar unrar synaptic gnome-decoder adb fastboot gnome-calendar
 ```
 
 ---
@@ -149,7 +163,7 @@ sudo apt install -y nodejs
 ### Global NPM Packages
 
 ```bash
-sudo npm install -g npm@latest npm-check-updates typescript pnpm yarn vite
+sudo npm install -g npm@latest corepack@latest npm-check-updates typescript pnpm@latest yarn vite
 sudo npm outdated -g --depth=0
 sudo npm update -g
 ```
@@ -386,6 +400,12 @@ echo lz4 | sudo tee /sys/block/zram0/comp_algorithm
 echo 8G | sudo tee /sys/block/zram0/disksize
 sudo mkswap /dev/zram0
 sudo swapon /dev/zram0
+```
+
+### 🔍 Check for x86-64-v4 Support
+
+```bash
+ld.so --help | grep 'v[0-9]'
 ```
 
 ---

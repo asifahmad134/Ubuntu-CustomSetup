@@ -110,3 +110,11 @@ ProdID: 4J771UA#ABA
 S/N#: SCD1462999
 INPUT: 19.5Vdc ~~ 2.31A
 ```
+
+###### Delete these for saving space in WinSxS
+
+```
+sudo rm -fdr amd64_microsoft-windows-onedrive*
+sudo rm -fdr amd64_microsoft-edge-webview*
+C:\Windows\System32\DriverStore\FileRepository\realtekservice.inf_amd64_4c654101995b0d9c\RtkAudUService64.exe
+```
