@@ -153,7 +153,7 @@ curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
 sudo apt install -y nodejs
 ```
 
-### Node.js 24.x Current
+### Node.js 24.x LTS
 
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_24.x | sudo bash -

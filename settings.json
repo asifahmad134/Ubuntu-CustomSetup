@@ -12,7 +12,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "Maple Mono NF, UbuntuSansMono NF",
   "editor.fontLigatures": "'calt', 'zero', 'cv03', 'ss01','ss03','ss09', 'ss10', 'ss11'",
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
   "editor.fontVariations": true,
   "editor.fontWeight": 400,
   "editor.formatOnPaste": true,
@@ -53,7 +53,7 @@
   "update.mode": "none",
   "window.density.editorTabHeight": "compact",
   "workbench.activityBar.location": "top",
-  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.colorTheme": "One Dark Pro Night Flat",
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.iconTheme": "material-icon-theme",
@@ -63,5 +63,9 @@
   "amp.tab.enabled": true,
   "editor.wordBasedSuggestions": "off",
   "chat.disableAIFeatures": true,
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairsHorizontal": true,
+  "prettier.experimentalTernaries": true
 }

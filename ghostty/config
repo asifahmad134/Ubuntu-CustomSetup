@@ -26,13 +26,14 @@
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
 window-width = 120
-window-height = 30
+window-height = 36
 font-family = Maple Mono NF
 font-style = Bold
 font-style-bold = ExtraBold
 font-size = 12
 font-feature = +liga
 font-feature = +calt
+
 #gtk-titlebar-style=tabs
 
 # window-padding-x = 2
