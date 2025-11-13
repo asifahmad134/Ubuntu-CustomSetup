@@ -88,18 +88,6 @@ sudo apt purge 'cups*' 'foomatic*' printer-driver-brlaser* printer-driver-foo2zj
 sudo apt autoremove --purge
 ```
 
-### Remove these gnome extensions (Not Recommended for all)
-
-```bash
-sudo apt purge gnome-shell-extension-appindicator gnome-shell-extension-desktop-icons-ng
-```
-
-### Remove All Backgrounds (50+ MB) - Optional / Not Recommended
-
-```bash
-sudo rm -fdr /usr/share/backgrounds/*
-```
-
 ### Remove Old Kernels
 
 First, identify installed kernels: Then remove specific versions:
@@ -109,6 +97,7 @@ dpkg --list | grep -i linux-image
 dpkg --list | grep -i linux-headers
 dpkg --list | grep -i linux-tools
 dpkg --list | grep -i linux-modules
+dpkg --list | grep -i linux-hwe
 sudo apt purge
 sudo apt autopurge
 sudo update-grub
