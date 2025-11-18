@@ -60,7 +60,8 @@ filesize_binary = true
 
 ```bash
 sudo snap list
-
+systemctl stop snapd
+systemctl disable snapd
 # Remove individual snaps
 sudo snap remove --purge firefox firmware-updater
 sudo snap remove --purge gnome-42-2204 gtk-common-themes
@@ -77,7 +78,12 @@ sudo apt autoremove --purge
 ### Purge Accessibility & Internationalization Packages (390+47 MB freed)
 
 ```bash
-sudo apt purge ubuntu-report apport apport-gtk brltty orca gnome-accessibility-themes fonts-noto-cjk speech-dispatcher* libpinyin* ibus* pocketsphinx* espeak* liblouis* hplip* eog
+# remove ubuntu-report & appcrash popup
+sudo apt purge ubuntu-report apport apport-gtk
+# Accessibility (117MB)
+sudo apt purge brltty orca gnome-accessibility-themes fonts-noto-cjk eog
+# blob errors, ignore
+sudo apt purge speech-dispatcher* libpinyin* ibus* pocketsphinx* espeak* liblouis* hplip* 
 sudo apt autoremove --purge
 ```
 
@@ -93,6 +99,8 @@ sudo apt autoremove --purge
 First, identify installed kernels: Then remove specific versions:
 
 ```bash
+dpkg --list | grep -Ei 'linux-image|linux-headers|linux-tools|linux-modules|linux-hwe'
+
 dpkg --list | grep -i linux-image
 dpkg --list | grep -i linux-headers
 dpkg --list | grep -i linux-tools
