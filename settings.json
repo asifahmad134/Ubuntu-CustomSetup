@@ -1,11 +1,4 @@
 {
-  "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
-  },
-  "editor.codeActionsOnSave": {
-    "source.sortImports": "never",
-    "source.removeTrailingWhitespace": "explicit"
-  },
   "editor.cursorBlinking": "expand",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorWidth": 2,
@@ -21,11 +14,6 @@
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": true,
-  "editor.quickSuggestions": {
-    "comments": false,
-    "other": false,
-    "strings": false
-  },
   "emmet.includeLanguages": {
     "astro": "html",
     "jsx": "jsx",
@@ -33,7 +21,6 @@
   },
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
-  "explorer.confirmDragAndDrop": false,
   "files.associations": {
     "*.css": "tailwindcss"
   },
@@ -62,10 +49,8 @@
   "amp.url": "https://ampcode.com/",
   "amp.tab.enabled": true,
   "editor.wordBasedSuggestions": "off",
-  "chat.disableAIFeatures": true,
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.guides.bracketPairs": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.guides.bracketPairsHorizontal": true,
-  "prettier.experimentalTernaries": true
+  "prettier.experimentalTernaries": true,
+  "editor.guides.bracketPairs": "active"
 }

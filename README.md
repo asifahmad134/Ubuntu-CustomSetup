@@ -83,7 +83,7 @@ sudo apt purge ubuntu-report apport apport-gtk
 # Accessibility (117MB)
 sudo apt purge brltty orca gnome-accessibility-themes fonts-noto-cjk eog
 # blob errors, ignore
-sudo apt purge speech-dispatcher* libpinyin* ibus* pocketsphinx* espeak* liblouis* hplip* 
+sudo apt purge speech-dispatcher* libpinyin* ibus* pocketsphinx* espeak* liblouis* hplip*
 sudo apt autoremove --purge
 ```
 
@@ -191,7 +191,7 @@ exec bash
 
 ## 🛸💽🚚 XTRADEB Packages
 
-Unofficial Ubuntu application packages maintained by xtradeb.
+Unofficial Ubuntu application packages maintained by xtradeb. in ungoogled-chromium extensions can not be installed, so i prefer mostly chromium.
 
 [xtradeb PPA](https://launchpad.net/~xtradeb/+archive/ubuntu/apps)
 
@@ -258,6 +258,8 @@ sudo rm -fdr /usr/share/code/resources/app/licenses
 ---
 
 ## 📦📦📦 Git & SSH Setup
+
+This setup is adviseable if you have only single git account, for multiples git accounts, a complex setup is required.
 
 ### Git Configuration
 
@@ -338,78 +340,3 @@ Free up disk space by deleting unnecessary Snap package revisions and caches.
 
 **[ubuntu_cleanup.sh](https://gist.github.com/Limbicnation/6763b69ab6a406790f3b7d4b56a2f6e8)**
 A comprehensive system cleanup script that safely removes unnecessary files to free up disk space.
-
-### Miscellaneous
-
-**update-all-icon-caches.sh** - Updates icon caches.
-
----
-
-## 🧠 Understanding zram Compression in Linux
-
-### What is zram?
-
-**zram** is a Linux kernel module that creates a compressed block device in RAM. It allows your system to use compressed memory for swap space or temporary storage, improving performance under memory pressure.
-
-### ⚙️ How zram Works
-
-When your system runs low on free RAM:
-
-1. Normally, Linux swaps inactive memory pages to disk (slow)
-2. With **zram**, those pages are compressed and kept in RAM
-3. This means faster access times since compressed RAM is much faster than disk I/O
-4. The CPU handles compression/decompression automatically
-
-### 📈 Benefits
-
-| Advantage              | Description                              |
-| ---------------------- | ---------------------------------------- |
-| 🚀 Faster swapping     | No disk I/O – data stays in RAM          |
-| 💾 Reduced SSD wear    | Less frequent writing to swap partitions |
-| ⚡ Better multitasking | Keeps your system responsive under load  |
-| 🔋 Energy efficient    | Reduces disk activity on laptops         |
-
-### ⚖️ Trade-offs
-
-- Uses CPU for compression/decompression (minimal on modern CPUs)
-- Consumes a portion of RAM for compressed data
-- Not as beneficial on systems with lots of unused memory
-
-### 🧮 Recommended zram Sizes
-
-| System RAM | Recommended zram Size | Notes                                                    |
-| ---------- | --------------------- | -------------------------------------------------------- |
-| **8 GB**   | 2× RAM (≈16 GB)       | Greatly improves responsiveness and multitasking         |
-| **16 GB**  | 1× RAM (≈16 GB)       | Balanced setup for most users                            |
-| **32 GB**  | 0.5× RAM (≈16 GB)     | Enough for compression efficiency; disk swap rarely used |
-
-**Summary:**
-
-- ≤ 8 GB RAM → heavier zram helps a lot
-- ≥ 16 GB RAM → moderate settings
-- ≥ 32 GB RAM → small zram, mostly for efficiency
-
-### 🧰 Enabling zram (Manual Example)
-
-```bash
-sudo modprobe zram
-echo lz4 | sudo tee /sys/block/zram0/comp_algorithm
-echo 8G | sudo tee /sys/block/zram0/disksize
-sudo mkswap /dev/zram0
-sudo swapon /dev/zram0
-```
-
-### 🔍 Check for x86-64-v4 Support
-
-```bash
-ld.so --help | grep 'v[0-9]'
-```
-
----
-
-## 📝 Notes
-
-- Always backup important data before making system changes
-- Test commands in a safe environment first
-- Review scripts before running them with sudo privileges
-- Keep your system updated regularly for security patches
