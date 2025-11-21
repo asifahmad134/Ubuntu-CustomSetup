@@ -66,9 +66,9 @@
             "{{if eq \"Full\" .State.String}}#66BB6A{{end}}"
           ],
           "properties": {
-            "charged_icon": "\ue22f ",
-            "charging_icon": "\ue234 ",
-            "discharging_icon": "\uf1d8  "
+            "charged_icon": "<#ffffff>\ue22f</> ",
+            "charging_icon": "\ueb2d ",
+            "discharging_icon": "<#ffff00>\uf244</> "
           },
           "style": "powerline",
           "template": "[{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295]",

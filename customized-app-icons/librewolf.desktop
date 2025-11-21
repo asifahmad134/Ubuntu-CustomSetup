@@ -9,7 +9,7 @@ Comment=Browse the World Wide Web
 Categories=Network;WebBrowser;Security;
 StartupWMClass=librewolf-default
 Exec=/usr/share/librewolf/librewolf %u
-Icon=/usr/share/icons/Librewoof.svg
+Icon=/usr/share/icons/lwc.svg
 
 Actions=new-window;new-private-window;safe-mode;preferences;
 
