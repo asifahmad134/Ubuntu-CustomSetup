@@ -3,13 +3,15 @@
 When installing Ubuntu, choose **DEFAULT SELECTION** (Just the essentials, web browser and basic utilities). All of the below removal and installation is to make Ubuntu more suitable for development.
 
 
-**[24-04.bash_aliases]** _usefull commands aliases for git & pnpm_
+**24-04.bash_aliases** _usefull commands aliases for git & pnpm_
 
-**[mise-installation.md]** _usefull commands & setups for mise_
+**mise-installation.md** _usefull commands & setups for mise_
 
-**[postInstall-Windows.md]** _usefull commands for Windows 10/11 after clean installation_
+**nodejs.md** _usefull commands & setups for nodejs_
 
-**[remove locales.md]** _Remove languages other than english from Chrome & electron-based apps_
+**postInstall-Windows.md** _usefull commands for Windows 10/11 after clean installation_
+
+**remove locales.md** _Remove languages other than english from Chrome & electron-based apps_
 
 
 ### useful commands to remember
@@ -147,33 +149,6 @@ sudo nala install ptyxis vlc file-roller rar unrar synaptic gnome-decoder adb fa
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
-
----
-
-## 🎴🎴🎴 Install Node.js
-
-### Node.js 22.x LTS
-
-```bash
-curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -
-sudo apt install -y nodejs
-```
-
-### Node.js 24.x LTS
-
-```bash
-curl -fsSL https://deb.nodesource.com/setup_24.x | sudo bash -
-sudo apt install -y nodejs
-```
-
-### Global NPM Packages
-
-```bash
-sudo npm install -g npm@latest corepack@latest npm-check-updates typescript pnpm@latest yarn vite
-sudo npm outdated -g --depth=0
-sudo npm update -g
-```
-
 ---
 
 ## 🆘🆘🆘 oh-my-posh Setup
