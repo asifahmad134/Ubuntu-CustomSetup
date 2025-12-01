@@ -2,7 +2,6 @@
 
 When installing Ubuntu, choose **DEFAULT SELECTION** (Just the essentials, web browser and basic utilities). All of the below removal and installation is to make Ubuntu more suitable for development.
 
-
 **24-04.bash_aliases** _usefull commands aliases for git & pnpm_
 
 **mise-installation.md** _usefull commands & setups for mise_
@@ -12,7 +11,6 @@ When installing Ubuntu, choose **DEFAULT SELECTION** (Just the essentials, web b
 **postInstall-Windows.md** _usefull commands for Windows 10/11 after clean installation_
 
 **remove locales.md** _Remove languages other than english from Chrome & electron-based apps_
-
 
 ### useful commands to remember
 
@@ -127,7 +125,7 @@ sudo update-grub
 ### Essential Tools
 
 ```bash
-# must have programs 
+# must have programs
 sudo nala install curl git gh gnome-shell-extension-manager gnome-tweaks loupe transmission tree foliate systemd-zram-generator lsd nautilus-admin gedit gedit-plugin
 # thunar file browser
 sudo nala install thunar thunar-media-tags-plugin
@@ -149,6 +147,7 @@ sudo nala install ptyxis vlc file-roller rar unrar synaptic gnome-decoder adb fa
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
+
 ---
 
 ## 🆘🆘🆘 oh-my-posh Setup
@@ -165,9 +164,11 @@ sudo chmod 777 .oh-my-posh/
 # Refresh bash after changes
 exec bash
 ```
+
 ### Files in oh-my-posh backups
 
 ## FOLDERS
+
 **[OMP]**
 customized oh-my-posh themes
 
@@ -175,6 +176,7 @@ customized oh-my-posh themes
 configuration file in Documents folder for MS Windows
 
 ## FILES
+
 **[themes-oh-my-posh.txt]**
 simple paths for themes in ~/.oh-my-posh
 
@@ -199,6 +201,7 @@ sudo add-apt-repository ppa:xtradeb/apps -y
 sudo nala update
 sudo nala install yt-dlp parabolic calibre ungoogled-chromium chromium gnucash intellij-idea-community pycharm-community
 ```
+
 ---
 
 ## 📦📦📦 Git & SSH Setup
