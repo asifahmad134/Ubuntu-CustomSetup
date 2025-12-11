@@ -63,3 +63,10 @@ sudo rm /opt/TickTick/LICENSE.electron.txt /opt/TickTick/LICENSES.chromium.html
 sudo rm /usr/lib/replit/locales/!("en-GB.pak"|"en-US.pak")
 sudo rm /usr/lib/replit/LICENSES.chromium.html
 ```
+
+### GitKraken
+
+```bash
+sudo rm /usr/share/gitkraken/locales/!("en-GB.pak"|"en-US.pak")
+sudo rm /usr/share/gitkraken/LICENSES.chromium.html /usr/share/gitkraken/LICENSE.electron
+```

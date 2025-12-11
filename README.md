@@ -113,7 +113,8 @@ dpkg --list | grep -i linux-headers
 dpkg --list | grep -i linux-tools
 dpkg --list | grep -i linux-modules
 dpkg --list | grep -i linux-hwe
-sudo apt purge
+sudo dpkg --purge package1 package2 package3 ...
+sudo apt purge package1 package2 package3 ...
 sudo apt autopurge
 sudo update-grub
 ```
