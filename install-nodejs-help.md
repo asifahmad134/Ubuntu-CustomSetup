@@ -12,6 +12,7 @@ sudo apt install -y nodejs
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_24.x | sudo bash -
 sudo apt install -y nodejs
+sudo nala install -y nodejs
 ```
 
 ### Global NPM Packages
