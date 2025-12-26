@@ -54,7 +54,7 @@
             "fetch_status": true
           }
         },
-         {
+        {
           "foreground": "#f36943",
           "foreground_templates": [
             "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",

@@ -2,7 +2,7 @@
 
 When installing Ubuntu, choose **DEFAULT SELECTION** (Just the essentials, web browser and basic utilities). All of the below removal and installation is to make Ubuntu more suitable for development.
 
-**24-04.bash_aliases** _commands aliases for git & pnpm_
+**ubuntu.bash_aliases** _commands aliases for git & pnpm_
 
 **mise-installation.md** _commands & setups for mise_
 

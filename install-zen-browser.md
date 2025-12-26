@@ -20,4 +20,3 @@ Terminal=false
 Type=Application
 Categories=Network;WebBrowser;
 ```
-
