@@ -2,13 +2,13 @@
 
 When installing Ubuntu, choose **DEFAULT SELECTION** (Just the essentials, web browser and basic utilities). All of the below removal and installation is to make Ubuntu more suitable for development.
 
-**24-04.bash_aliases** _usefull commands aliases for git & pnpm_
+**24-04.bash_aliases** _commands aliases for git & pnpm_
 
-**mise-installation.md** _usefull commands & setups for mise_
+**mise-installation.md** _commands & setups for mise_
 
-**nodejs.md** _usefull commands & setups for nodejs_
+**nodejs.md** _commands & setups for nodejs_
 
-**postInstall-Windows.md** _usefull commands for Windows 10/11 after clean installation_
+**postInstall-Windows.md** _commands for Windows 10/11 after clean installation_
 
 **remove locales.md** _Remove languages other than english from Chrome & electron-based apps_
 
@@ -37,17 +37,11 @@ sudo apt autoremove --purge
 sudo apt autopurge
 ```
 
-### Configure Nala
+### Configure **nala**
 
 edit this file `sudo nano /etc/nala/nala.conf`:
 
 ```bash
-# Set to true to make full-upgrade the default
-full_upgrade = true
-
-# Set to true: Nala will list the upgradable packages automatically after `update`
-update_show_packages = true
-
 # Set to true for `MiB` false for `MB`
 filesize_binary = true
 ```
@@ -127,7 +121,8 @@ sudo update-grub
 
 ```bash
 # must have programs
-sudo nala install curl git gh gnome-shell-extension-manager gnome-tweaks loupe transmission tree foliate systemd-zram-generator lsd nautilus-admin gedit gedit-plugin
+sudo nala install curl git gh gnome-shell-extension-manager gnome-tweaks loupe transmission foliate lsd nautilus-admin gedit gedit-plugins
+# systemd-zram-generator tree nemo
 # thunar file browser
 sudo nala install thunar thunar-media-tags-plugin
 # multimedia programs
@@ -207,7 +202,7 @@ sudo nala install yt-dlp parabolic calibre ungoogled-chromium chromium gnucash i
 
 ## 📦📦📦 Git & SSH Setup
 
-This setup is adviseable if you have only single git account, for multiple git accounts, a complex setup is required.
+This setup is recommended if you have only single git account, for multiple git accounts, a complex setup is required.
 
 ### Git Configuration
 
@@ -215,6 +210,7 @@ This setup is adviseable if you have only single git account, for multiple git a
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 git config --global color.ui auto
+git config --global core.editor "code --wait"
 ```
 
 ### SSH Setup
@@ -223,6 +219,8 @@ git config --global color.ui auto
 
 ```bash
 ls -al ~/.ssh
+mkdir .ssh
+cd .ssh
 ```
 
 If keys exist, proceed to steps 3 & 6.
