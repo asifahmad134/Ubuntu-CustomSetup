@@ -2,13 +2,13 @@
 
 When installing Ubuntu, choose **DEFAULT SELECTION** (Just the essentials, web browser and basic utilities). All of the below removal and installation is to make Ubuntu more suitable for development.
 
-**ubuntu.bash_aliases** _commands aliases for git & pnpm_
+**bash_aliases** _commands aliases for git & pnpm_
 
-**mise-installation.md** _commands & setups for mise_
+**install-mise-help.md** _commands & setups for mise_
 
-**nodejs.md** _commands & setups for nodejs_
+**install-nodejs-help.md** _commands & setups for nodejs_
 
-**postInstall-Windows.md** _commands for Windows 10/11 after clean installation_
+**install-windows11-help.md** _commands for Windows 10/11 after clean installation_
 
 **remove locales.md** _Remove languages other than english from Chrome & electron-based apps_
 
@@ -165,7 +165,7 @@ exec bash
 
 ## FOLDERS
 
-**[OMP]**
+**[omp]**
 customized oh-my-posh themes
 
 **[WindowsPowerShell]**

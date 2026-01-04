@@ -70,3 +70,17 @@ sudo rm /usr/lib/replit/LICENSES.chromium.html
 sudo rm /usr/share/gitkraken/locales/!("en-GB.pak"|"en-US.pak")
 sudo rm /usr/share/gitkraken/LICENSES.chromium.html /usr/share/gitkraken/LICENSE.electron
 ```
+
+### Obsidian
+
+```bash
+sudo rm /opt/Obsidian/locales/!("en-GB.pak"|"en-US.pak")
+sudo rm /opt/Obsidian/LICENSES.chromium.html /opt/Obsidian/LICENSE.electron.txt
+```
+
+### Joplin
+
+```bash
+sudo rm /opt/Joplin/locales/!("en-GB.pak"|"en-US.pak")
+sudo rm /opt/Joplin/LICENSES.chromium.html /opt/Joplin/LICENSE.electron.txt
+```
