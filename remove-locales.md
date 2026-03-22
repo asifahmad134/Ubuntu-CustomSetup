@@ -2,38 +2,18 @@
 
 Remove unused locales from Chrome & Electron-based apps:
 
-### VS Code
-
-```bash
-sudo rm /usr/share/code/resources/app/ThirdPartyNotices.txt /usr/share/code/LICENSES.chromium.html /usr/share/code/resources/app/LICENSE.rtf
-sudo rm /usr/share/code/locales/!("en-GB.pak"|"en-US.pak")
-sudo rm -fdr /usr/share/code/resources/app/licenses
-```
-
-### FreeTube
-
-```bash
-sudo rm /opt/FreeTube/locales/!("en-GB.pak"|"en-US.pak")
-sudo rm /opt/FreeTube/LICENSES.chromium.html /opt/FreeTube/LICENSE.electron.txt
-```
-
 ### Google Chrome
 
 ```bash
 sudo rm /opt/google/chrome/locales/!("en-GB.pak"|"en-US.pak")
 ```
 
-### Brave Browser
+### VS Code
 
 ```bash
-sudo rm /opt/brave.com/brave/locales/!("en-GB.pak"|"en-US.pak")
-```
-
-### Google antigravity
-
-```bash
-sudo rm /usr/share/antigravity/locales/!("en-GB.pak"|"en-US.pak")
-sudo rm /usr/share/antigravity/resources/app/ThirdPartyNotices.txt /usr/share/antigravity/LICENSES.chromium.html /usr/share/antigravity/resources/app/LICENSE.txt
+sudo rm /usr/share/code/resources/app/ThirdPartyNotices.txt /usr/share/code/LICENSES.chromium.html /usr/share/code/resources/app/LICENSE.rtf
+sudo rm /usr/share/code/locales/!("en-GB.pak"|"en-US.pak")
+sudo rm -fdr /usr/share/code/resources/app/licenses
 ```
 
 ### Cursor
@@ -48,6 +28,35 @@ sudo rm /usr/share/cursor/resources/app/ThirdPartyNotices.txt /usr/share/cursor/
 ```bash
 sudo rm /usr/lib/slack/locales/!("en-GB.pak"|"en-US.pak")
 sudo rm /usr/lib/slack/LICENSE /usr/lib/slack/resources/LICENSES.chromium.html
+```
+
+### ONLYOFFICE
+
+```bash
+sudo rm /opt/onlyoffice/desktopeditors/locales/!("en-US.pak")
+sudo rm -rf /opt/onlyoffice/desktopeditors/converter/empty/!("en-US"|"default")
+sudo rm -rf /opt/onlyoffice/desktopeditors/converter/templates/!("EN")
+sudo rm -rf /opt/onlyoffice/desktopeditors/dictionaries/!("en_US")
+```
+
+### FreeTube
+
+```bash
+sudo rm /opt/FreeTube/locales/!("en-GB.pak"|"en-US.pak")
+sudo rm /opt/FreeTube/LICENSES.chromium.html /opt/FreeTube/LICENSE.electron.txt
+```
+
+### Brave Browser
+
+```bash
+sudo rm /opt/brave.com/brave/locales/!("en-GB.pak"|"en-US.pak")
+```
+
+### Google antigravity
+
+```bash
+sudo rm /usr/share/antigravity/locales/!("en-GB.pak"|"en-US.pak")
+sudo rm /usr/share/antigravity/resources/app/ThirdPartyNotices.txt /usr/share/antigravity/LICENSES.chromium.html /usr/share/antigravity/resources/app/LICENSE.txt
 ```
 
 ### TickTick
