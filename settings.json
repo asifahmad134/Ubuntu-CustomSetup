@@ -73,4 +73,5 @@
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
+  "workbench.preferredLightColorTheme": "VS Code Dark",
 }
