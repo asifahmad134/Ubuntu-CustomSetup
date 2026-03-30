@@ -30,6 +30,13 @@ sudo rm /usr/lib/slack/locales/!("en-GB.pak"|"en-US.pak")
 sudo rm /usr/lib/slack/LICENSE /usr/lib/slack/resources/LICENSES.chromium.html
 ```
 
+### Super Productivity
+
+```bash
+sudo rm /opt/Super\ Productivity/locales/!("en-GB.pak"|"en-US.pak")
+sudo rm /opt/Super\ Productivity/LICENSES.chromium.html /opt/Super\ Productivity/LICENSE.electron.txt
+```
+
 ### ONLYOFFICE
 
 ```bash
